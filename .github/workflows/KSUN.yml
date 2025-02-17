@@ -1,7 +1,5 @@
 name: Build Kernel Next-SUSFS For OnePlus12
 on:
-  schedule:
-    - cron: '0 22 * * *'
   workflow_dispatch:
     inputs:
       CPU:
