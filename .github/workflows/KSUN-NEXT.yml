@@ -60,6 +60,11 @@ jobs:
          repo sync
          rm kernel_platform/common/android/abi_gki_protected_exports_* || echo "No protected exports!"
          rm kernel_platform/msm-kernel/android/abi_gki_protected_exports_* || echo "No protected exports!"
+         file="gki_defconfig"
+           if grep -q '^CONFIG_KSU_WITH_KPROBES=y$' "$file"; then
+                sed -i 's/^CONFIG_KSU_WITH_KPROBES=y$/CONFIG_KSU_WITH_KPROBES=n/' "$file"
+           else
+                echo "CONFIG_KSU_WITH_KPROBES=n" >> "$file"
          sed -i 's/ -dirty//g' kernel_platform/common/scripts/setlocalversion
          sed -i 's/ -dirty//g' kernel_platform/msm-kernel/scripts/setlocalversion
          sed -i 's/ -dirty//g' kernel_platform/external/dtc/scripts/setlocalversion
