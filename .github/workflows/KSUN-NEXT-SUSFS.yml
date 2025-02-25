@@ -115,7 +115,7 @@ jobs:
            
       - name: Build kernel
         run: |
-         cd kernel_workspace/common/arch/arm64/configs
+         cd kernel_workspace/kernel_platform/common/arch/arm64/configs
          file="gki_defconfig"
          if grep -q '^CONFIG_KSU_WITH_KPROBES=y$' "$file"; then
             sed -i 's/^CONFIG_KSU_WITH_KPROBES=y$/CONFIG_KSU_WITH_KPROBES=n/' "$file"
