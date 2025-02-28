@@ -22,20 +22,7 @@ on:
         description: "内核版本"
         required: true
         default: '6.1'
-      SUSFS_VERSION:
-        description: "SUSFS 版本"
-        required: true
-        default: 'v1.5.5'
-      KSUNEXT_ENABLED:
-        description: "添加 KSU Next"
-        required: true
-        type: boolean
-        default: true
-      SUSFS_ENABLED:
-        description: "添加 SUSFS"
-        required: true
-        type: boolean
-        default: true
+        
 jobs:
   build:
     runs-on: ubuntu-latest
