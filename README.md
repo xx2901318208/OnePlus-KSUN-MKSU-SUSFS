@@ -3,6 +3,8 @@
 
 # 使用说明:
 
-[Next(Patch SUSFS)](https://github.com/Xiaomichael/OnePlus-KSUN-MKSU-SUSFS/actions/workflows/KSUN-NEXT.yml)为最新版cl + Patch SUSFS, 推荐使用
+[Next(Patch SUSFS)](https://github.com/Xiaomichael/OnePlus-KSUN-MKSU-SUSFS/actions/workflows/KSUN-NEXT.yml)为最新KSUNext cl版 + Patch SUSFS, 推荐使用
 
-[Next-SUSFS](https://github.com/Xiaomichael/OnePlus-KSUN-MKSU-SUSFS/actions/workflows/KSUN-NEXT-SUSFS.yml)为Next-SUSFS分支, 如果上面这个无法使用再使用这个
+[Next-SUSFS](https://github.com/Xiaomichael/OnePlus-KSUN-MKSU-SUSFS/actions/workflows/KSUN-NEXT-SUSFS.yml)为KSUNext-SUSFS分支, 如果上面这个无法使用再使用这个
+
+[MKSU(Patch SUSFS)](https://github.com/Xiaomichael/OnePlus-KSUN-MKSU-SUSFS/actions/workflows/MKSU.yml)MKSU目前无法编译
