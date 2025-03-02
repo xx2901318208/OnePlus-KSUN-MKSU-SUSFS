@@ -102,7 +102,9 @@ jobs:
           # Apply additional patch
           cp ../../../kernel_patches/69_hide_stuff.patch ./
           patch -p1 -F 3 < 69_hide_stuff.patch
-
+          patch -p1 < ../../.repo/manifests/patches/001-lz4.patch
+          patch -p1 < ../../.repo/manifests/patches/002-zstd.patch
+          patch -p1 < ../../.repo/manifests/patches/bbrv3.patch
       - name: Add SUSFS Configuration Settings
         run: |
           echo "Changing to configuration directory: $CONFIG..."
@@ -145,7 +147,7 @@ jobs:
           
           # Run sed commands for modifications
           sed -i 's/check_defconfig//' ./common/build.config.gki
-          sed -i '$s|echo "\$res"|echo "\$res-1263599071"|' ./common/scripts/setlocalversion
+          sed -i '$s|echo "\$res"|echo "\$res-R1263599071"|' ./common/scripts/setlocalversion
           sed -i '$s|echo "\$res"|echo "\$res-R1263599071"|' ./msm-kernel/scripts/setlocalversion
           sed -i "/stable_scmversion_cmd/s/-maybe-dirty//g" ./build/kernel/kleaf/impl/stamp.bzl
           sed -i 's/-dirty//' ./common/scripts/setlocalversion
