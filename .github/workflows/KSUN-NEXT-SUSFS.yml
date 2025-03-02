@@ -1,5 +1,4 @@
-name: Build gt5pro  Android 14 6.1 Kernel
-
+name: Build Kernel Next(Patch SUSFS) For gt5pro
 on:
   workflow_call:  # This allows this workflow to be called from another workflow
   
@@ -21,7 +20,7 @@ jobs:
       - name: Set CONFIG Environment Variable
         run: |
           # Set CONFIG dynamically based on matrix values
-          CONFIG="gt5pro"
+          CONFIG="OP12"
           
           # Set CONFIG as an environment variable for future steps
           echo "CONFIG=$CONFIG" >> $GITHUB_ENV
